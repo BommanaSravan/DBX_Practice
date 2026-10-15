@@ -37,7 +37,7 @@ jobs:
           python-version: "3.12"
 
       - name: Install Databricks CLI
-        uses: databricks/setup-cli@v0.9.0
+        uses: databricks/setup-cli@main
 
       - name: Verify Databricks authentication
         run: databricks current-user me
