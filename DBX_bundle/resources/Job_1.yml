@@ -1,0 +1,15 @@
+resources:
+  jobs:
+    Sample_job:
+      name: Sample job
+      tasks:
+        - task_key: Sample
+          notebook_task:
+            notebook_path: ../src/Sample_Table_Creator.ipynb
+            source: WORKSPACE
+            base_parameters:
+              catalog: ${var.catalog}
+              schema: ${var.schema}
+      queue:
+        enabled: true
+      performance_target: PERFORMANCE_OPTIMIZED
